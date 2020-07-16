@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2 style="text-align: center;">JavaScript String Methods</h2>
+
+<p>The <strong>length</strong> property returns the length of a string:</p>
+
+<p id="demo1"></p>
+
+<script>
+var txt = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.getElementById("demo1").innerHTML = txt.length;
+</script>
+<hr>
+<p>The <strong>indexOf()</strong> method returns the position of the first occurrence of a specified text:</p>
+
+<p id="demo2"></p>
+
+<script>
+var str = "Please locate where 'locate' occurs!";
+var pos = str.indexOf("locate");
+document.getElementById("demo2").innerHTML = pos;
+</script>
+<hr>
+<p>The <strong>lastIndexOf()</strong> method returns the position of the last occurrence of a specified text:</p>
+
+<p id="demo3"></p>
+
+<script>
+var str = "Please locate where 'locate' occurs!";
+var pos = str.lastIndexOf("locate");
+document.getElementById("demo3").innerHTML = pos;
+</script>
+<hr>
+<p>Both <strong>indexOf()</strong>, and <strong>lastIndexOf()</strong> return -1 if the text is not found:</p>
+
+<p id="demo4"></p>
+
+<script>
+var str = "Please locate where 'locate' occurs!";
+var pos = str.indexOf("John");
+document.getElementById("demo4").innerHTML = pos;
+</script>
+<hr>
+<p>The <strong>indexOf()</strong> method accepts a <mark>second parameter</mark> as the starting position for the search:</p>
+
+<p id="demo5"></p>
+
+<script>
+var str = "Please locate where 'locate' occurs!";
+var pos = str.indexOf("locate",15);
+document.getElementById("demo5").innerHTML = pos;
+</script>
+<hr>
+<p>The <strong>lastIndexOf()</strong> method accepts a second parameter as the starting position for the search.</p>
+<p>Remember that the <strong>lastIndexOf()</strong> method searches <mark>backwards</mark>, so position 15 means start the search at position 15, and search to the beginning.</p>
+<p>Position 15 is position 15 from the beginning.</p>
+
+<p id="demo6"></p>
+
+<script>
+var str = "Please locate where 'locate' occurs!";
+var pos = str.lastIndexOf("locate", 15);
+document.getElementById("demo6").innerHTML = pos;
+</script>
+<hr>
+<p>The <strong>search()</strong> method returns the position of the <mark>first occurrence</mark> of a specified text in a string:</p>
+
+<p id="demo7"></p>
+
+<script>
+var str = "Please locate where 'locate' occurs!";
+var pos = str.search("locate");
+document.getElementById("demo7").innerHTML = pos;
+</script>
+<hr>
+<hr>
+<h2 style="text-align: center;">JavaScript Array Methods</h2> 
+
+<p>The <strong>toString() </strong>method returns an array as a comma separated string:</p>
+
+<p id="sample1"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("sample1").innerHTML = fruits.toString();
+</script>
+<hr>
+<p>The <strong>join()</strong> method joins array elements into a string.</p>
+
+<p>It this example we have used " * " as a separator between the elements:</p>
+
+<p id="sample2"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("sample2").innerHTML = fruits.join(" * ");
+</script>
+<hr>
+<p>The <strong>pop()</strong> method removes the last element from an array.</p>
+
+<p id="sample3"></p>
+<p id="sample4"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("sample3").innerHTML = fruits;
+fruits.pop();
+document.getElementById("sample4").innerHTML = fruits;
+</script>
+<hr>
+<p>The <strong>pop()</strong> method removes the last element from an array.</p>
+
+<p>The return value of the pop() method is the removed item.</p>
+
+<p id="sample5"></p>
+<p id="sample6"></p>
+<p id="sample7"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("sample5").innerHTML = fruits;
+document.getElementById("sample6").innerHTML = fruits.pop();
+document.getElementById("sample7").innerHTML = fruits;
+</script>
+<hr>
+<p>The <strong>push()</strong> method appends a new element to an array.</p>
+
+<button onclick="myFunction1()">Try it</button>
+
+<p id="sample8"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("sample8").innerHTML = fruits;
+
+function myFunction1() {
+  fruits.push("Kiwi");
+  document.getElementById("sample8").innerHTML = fruits;
+}
+</script>
+<hr>
+<p>The <strong>shift()</strong> method removes the first element of an array (and "shifts" all other elements to the left):</p>
+
+<p id="sample9"></p>
+<p id="sample10"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("sample9").innerHTML = fruits;
+fruits.shift();
+document.getElementById("sample10").innerHTML = fruits;
+</script>
+<hr>
+<p>The <strong>shift()</strong> method returns the element that was shifted out.</p>
+
+<p id="sample11"></p>
+<p id="sample12"></p>
+<p id="sample13"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("sample11").innerHTML = fruits;
+document.getElementById("sample12").innerHTML = fruits.shift();
+document.getElementById("sample13").innerHTML = fruits;
+</script>
+<hr>
+<p>The <strong>unshift()</strong> method adds new elements to the beginning of an array.</p>
+
+<button onclick="myFunction2()">Try it</button>
+
+<p id="sample14"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("sample14").innerHTML = fruits;
+
+function myFunction2() {
+  fruits.unshift("Lemon");
+  document.getElementById("sample14").innerHTML = fruits;
+}
+</script>
+<hr>
+<p>The <strong>unshift()</strong> method returns the length of the new array:</p>
+
+<p id="sample15"></p>
+<p id="sample16"></p>
+<p id="sample17"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("sample15").innerHTML = fruits;
+document.getElementById("sample16").innerHTML = fruits.unshift("Lemon");
+document.getElementById("sample17").innerHTML = fruits;
+</script>
+<hr>
+<p>Array elements are accessed using their <strong>index number</strong>:</p>
+
+<p id="sample18"></p>
+<p id="sample19"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("sample18").innerHTML = fruits;
+fruits[0] = "Kiwi";
+document.getElementById("sample19").innerHTML = fruits;
+</script>
+<hr>
+<p>The <strong>length</strong> property provides an easy way to append new elements to an array without using the push() method.</p>
+
+<button onclick="myFunction3()">Try it</button>
+
+<p id="sample20"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("sample20").innerHTML = fruits;
+
+function myFunction3() {
+  fruits[fruits.length] = "Kiwi";
+  document.getElementById("sample20").innerHTML = fruits;
+}
+</script>
+<hr>
+<p><strong>Deleting</strong> elements leaves undefined holes in an array.</p>
+
+<p id="sample21"></p>
+<p id="sample22"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("sample21").innerHTML =
+"The first fruit is: " + fruits[0];
+delete fruits[0];
+document.getElementById("sample22").innerHTML =
+"The first fruit is: " + fruits[0];
+</script>
+<hr>
+<p>The <strong>splice()</strong> method adds new elements to an array.</p>
+
+<button onclick="myFunction4()">Try it</button>
+
+<p id="sample23"></p>
+<p id="sample24"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("sample23").innerHTML = "Original Array:<br>" + fruits;
+function myFunction4() {
+  fruits.splice(2, 0, "Lemon", "Kiwi");
+  document.getElementById("sample24").innerHTML = "New Array:<br>" + fruits;
+}
+</script>
+<hr>
+<p>The <strong>splice()</strong> method adds new elements to an array, and returns an array with the deleted elements (if any).</p>
+
+<button onclick="myFunction5()">Try it</button>
+
+<p id="sample25"></p>
+<p id="sample26"></p>
+<p id="sample27"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("sample25").innerHTML = "Original Array:<br> " + fruits;
+
+function myFunction5() {
+  var removed = fruits.splice(2, 2, "Lemon", "Kiwi"); 
+  document.getElementById("sample26").innerHTML = "New Array:<br>" + fruits;
+  document.getElementById("sample27").innerHTML = "Removed Items:<br> " + removed; 
+}
+</script>
+<hr>
+<p>The <strong>splice()</strong> methods can be used to remove array elements.</p>
+
+<button onclick="myFunction6()">Try it</button>
+
+<p id="sample28"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("sample28").innerHTML = fruits;
+function myFunction6() {
+  fruits.splice(0, 1);
+  document.getElementById("sample28").innerHTML = fruits;
+}
+</script>
+<hr>
+<p>The <strong>concat()</strong> method is used to merge (concatenate) arrays:</p>
+
+<p id="sample29"></p>
+
+<script>
+var myGirls = ["Cecilie", "Lone"];
+var myBoys = ["Emil", "Tobias", "Linus"];
+var myChildren = myGirls.concat(myBoys);
+
+document.getElementById("sample29").innerHTML = myChildren;
+</script>
+<hr>
+<p>The <strong>concat()</strong> method is used to merge (concatenate) arrays:</p>
+
+<p id="sample30"></p>
+
+<script>
+var arr1 = ["Cecilie", "Lone"];
+var arr2 = ["Emil", "Tobias", "Linus"];
+var arr3 = ["Robin", "Morgan"];
+
+var myChildren = arr1.concat(arr2, arr3); 
+
+document.getElementById("sample30").innerHTML = myChildren;
+</script>
+<hr>
+<p>The <strong>concat()</strong> method can also merge string values to arrays:</p>
+
+<p id="sample31"></p>
+
+<script>
+var arr1 = ["Emil", "Tobias", "Linus"];
+var myChildren = arr1.concat("Peter"); 
+document.getElementById("sample31").innerHTML = myChildren;
+</script>
+<hr>
+<p>This example <strong>slice()</strong> out a part of an array starting from array element 1 ("Orange"):</p>
+
+<p id="sample32"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+var citrus = fruits.slice(1);
+document.getElementById("sample32").innerHTML = fruits + "<br><br>" + citrus;
+</script>
+<hr>
+<p>When the <strong>slice()</strong> method is given two arguments, it selects array elements from the start argument, and up to (but not included) the end argument:</p>
+
+<p id="sample33"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+var citrus = fruits.slice(1,3);
+document.getElementById("sample33").innerHTML = fruits + "<br><br>" + citrus;
+</script>
+<hr>
+<p>The <strong>toString()</strong> method returns an array as a comma separated string:</p>
+
+<p id="sample34"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("sample34").innerHTML = fruits.toString();
+</script>
+<hr>
+<p>JavaScript automatically converts an array to a comma separated string when a simple value is expected:</p>
+
+<p id="sample35"></p>
+
+<script>
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("sample35").innerHTML = fruits;
+</script>
+<hr>
+
+</body>
+</html>
