@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Day-3 assignment</title>
+    </head>
+        <body>
+        <h2>1.</h1>
+        Enter any number:<input id="no_input"><br />
+        <button onclick="odd_even()">Click me</button>
+        <script>
+            function odd_even(){
+            var num;
+            num=Number(document.getElementById("no_input").value);
+            if(num%2==0)
+            {
+                console.log("The Number entered is "+num+" and Number is even");
+            }
+            else
+            {
+                console.log("The Number entered is "+num+" and Number is odd");
+            }
+            }
+            </script>
+            <hr>
+
+        </body>
+</html>

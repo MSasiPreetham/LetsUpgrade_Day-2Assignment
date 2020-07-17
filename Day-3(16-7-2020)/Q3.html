@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Day-3 assignment</title>
+    </head>
+    <body>
+        <h2>1.</h1>
+            Enter any number:<input id="marks_input"><br />
+            <button onclick="grade()">Click me</button>
+       <script>
+           function grade() {
+               var marks=Number(document.getElementById("marks_input").value);
+               if(marks>=90){
+                console.log("The marks are "+marks+" and grade is A");
+               }
+               else if(marks>=75 && marks<90){
+                console.log("The marks are "+marks+" and grade is B");
+               }
+               else if(marks>=60 && marks<75){
+                console.log("The marks are "+marks+" and grade is C");
+               }
+               else if(marks>=35 && marks<60){
+                console.log("The marks are "+marks+" and grade is D");
+               }
+               else {
+                console.log("The marks are "+marks+" and grade is F");
+               }
+        }
+       </script> 
+    </body>
+</html>
