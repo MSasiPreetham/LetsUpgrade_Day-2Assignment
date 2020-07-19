@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="8-utf">
+<title>Arrow function</title>
+</head>
+<body>
+    <script>
+        // replace Function Expression with arrow functions in the code below
+        // function ask(question, yes, no){
+        //     if(confirm(question)) yes()
+        //     else no();
+        // }
+        // ask(
+        //     "Do you agree?",
+        //     function() {alert("You agreed");},
+        //     function() {alert("You cancled the execution.");}
+        // );
+        // ****** answer ******
+        function ask(question, yes, no){
+            if(confirm(question)) yes()
+            else no();
+        }
+        ask(
+            "Do you agree?",
+            ()=> {alert("You agreed");},
+            ()=> {alert("You cancled the execution.");}
+        );
+    </script>
+</body>
+</html>
