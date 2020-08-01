@@ -1,0 +1,73 @@
+body{
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: absolute;
+    /* background-image: url('https://wallpapercave.com/wp/5KLTq1z.jpg'); */
+    background-image: url('wallpaper.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: top;
+    z-index: -2;
+}
+.container {
+    padding-top: 1.5em;
+    text-align: center;
+}
+.container h1{
+    text-align: center;
+    color: sandybrown;
+}
+#quotedisplay{
+    margin-top: 90px;
+    color: wheat;
+    line-height: 1em;
+    font-size: 2em;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    letter-spacing: 1px;
+    text-align: center;
+    opacity: 0.80;
+    padding-bottom: 25px;
+}
+#btn {
+    width: 100%;
+    margin: 0;
+    /* padding-left: 10em; */
+    text-align: center;
+    position: fixed;
+    bottom: 9em;
+    right: 1px;
+}
+#gen {
+    text-decoration: none;
+    opacity: 0.6;
+    background-color: black;
+    color: white;
+    border: thin solid white;
+    height: 40px;
+    width: 110px;
+    border-radius: 2px;
+    transition: 0.5s;
+    padding: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+/* @media screen 
+ and (max-device-width: 800px) 
+  and (max-device-height: 640px) 
+  and (-webkit-device-pixel-ratio: 2) 
+  and (orientation: portrait) {
+    p {
+      font-size: 1em;
+    }
+} */
+@media (max-width: 991px){
+    body{
+        background: radial-gradient(cornflowerblue,lightblue);
+    }
+    .container h1{
+        color: black;
+    }
+}
